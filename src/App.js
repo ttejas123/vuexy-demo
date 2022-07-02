@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
+  const data = axios.get('/getData').then(res => {
+    console.log(res)
+  })
+
   return (
     <div className="App">
       <header className="App-header">
